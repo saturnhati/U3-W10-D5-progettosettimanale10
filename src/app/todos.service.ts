@@ -10,7 +10,7 @@ export class TodosService {
 
   constructor() {}
 
-  addTodo() {}
+  addTodo(task: Todo) {}
 
   checkTodo() {}
 

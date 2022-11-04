@@ -3,11 +3,15 @@
 }
 
 header {
+  margin: {
+    top: 1.4rem;
+    bottom: 1.4rem;
+  }
   text-align: center;
   a {
     text-decoration: none;
     margin: 1rem;
-    color: black;
+    color: white;
     font-weight: 600;
   }
   a:hover {

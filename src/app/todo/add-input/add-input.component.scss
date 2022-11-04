@@ -1,0 +1,38 @@
+div {
+  width: 90%;
+  margin: {
+    top: 0;
+    bottom: 1.4rem;
+    left: auto;
+    right: auto;
+  }
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 6px;
+  padding: {
+    top: 12px;
+    bottom: 12px;
+    left: 16px;
+    right: 16px;
+  }
+  input {
+    width: 80%;
+    border: none;
+    background-color: white;
+  }
+  button {
+    background-color: #8f6ac2;
+    border: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: white;
+    padding: {
+      top: 6px;
+      bottom: 6px;
+      left: 12px;
+      right: 12px;
+    }
+  }
+}

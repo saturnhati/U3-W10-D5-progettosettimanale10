@@ -1,1 +1,17 @@
-<p>task-list works!</p>
+<ul>
+  <li *ngFor="let todo of todos; let i = index">
+    <div>
+      <span><i class="mark fa-solid fa-angles-right"></i></span>
+      <span>{{ i + 1 }}</span>
+      <h4>{{ todo.title }}</h4>
+    </div>
+    <div>
+      <button type="button" (click)="removeTodo(todo)">
+        <i class="fa-regular fa-trash-can"></i>
+      </button>
+      <button type="button" (click)="completeTodo(todo)">
+        <i class="fa-regular fa-square-check"></i>
+      </button>
+    </div>
+  </li>
+</ul>

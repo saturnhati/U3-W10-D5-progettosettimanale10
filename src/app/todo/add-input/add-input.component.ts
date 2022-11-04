@@ -8,13 +8,15 @@ import { TodosService } from '../../todos.service';
   styleUrls: ['./add-input.component.scss'],
 })
 export class AddInputComponent implements OnInit {
-  task?: Todo = new Todo();
+  title: string = '';
 
   constructor(private todosService: TodosService) {}
 
   ngOnInit(): void {}
 
-  addTodo(task: Todo) {
+  addTodo() {
+    let task: Todo = new Todo(this.title);
     this.todosService.addTodo(task);
+    this.title = '';
   }
 }

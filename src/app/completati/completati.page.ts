@@ -9,9 +9,15 @@ import { TodosService } from '../todos.service';
 export class CompletatiPage implements OnInit {
   constructor(private todosService: TodosService) {}
 
-  todos: Todo[] = this.todosService.doneTodos;
+  doneTodos: Todo[] = this.todosService.doneTodos;
 
-  ngOnInit(): void {}
+  loading: boolean = true;
+
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
+  }
 
   redoTodo(todo: Todo) {
     this.todosService.redoTodo(todo);

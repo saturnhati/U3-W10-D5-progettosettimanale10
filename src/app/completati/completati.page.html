@@ -1,6 +1,10 @@
-<ul>
+<div *ngIf="loading === true">
+  <p>Loading tasks...</p>
+</div>
+<ul *ngIf="loading === false">
   <h2>COMPLETED TASKS</h2>
-  <li *ngFor="let todo of todos; let i = index">
+  <p *ngIf="doneTodos.length === 0">Oops, there are no completed tasks!</p>
+  <li *ngFor="let todo of doneTodos; let i = index">
     <div>
       <span><i class="mark fa-solid fa-angles-right"></i></span>
       <span>{{ i + 1 }}</span>

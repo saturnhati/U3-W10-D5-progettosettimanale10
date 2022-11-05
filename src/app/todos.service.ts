@@ -6,13 +6,7 @@ import { Todo } from './classes/todo';
   providedIn: 'root',
 })
 export class TodosService {
-  todos: Todo[] = [
-    {
-      id: 1,
-      title: 'prova prova prova',
-      completed: false,
-    },
-  ];
+  todos: Todo[] = [];
   doneTodos: Todo[] = [];
 
   constructor() {}
@@ -23,6 +17,7 @@ export class TodosService {
 
   checkTodo(todo: Todo) {
     let index = this.todos.indexOf(todo);
+    todo.completed = true;
     let task = todo;
     this.todos.splice(index, 1);
     this.doneTodos.push(task);
@@ -30,6 +25,7 @@ export class TodosService {
 
   redoTodo(todo: Todo) {
     let index = this.todos.indexOf(todo);
+    todo.completed = false;
     let task = todo;
     this.doneTodos.splice(index, 1);
     this.todos.push(task);

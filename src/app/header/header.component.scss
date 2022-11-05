@@ -3,18 +3,24 @@
 }
 
 header {
-  margin: {
+  padding: {
     top: 1.4rem;
     bottom: 1.4rem;
   }
   text-align: center;
   a {
+    font-size: 1.2rem;
     text-decoration: none;
     margin: 1rem;
-    color: white;
+    color: lavender;
     font-weight: 600;
   }
   a:hover {
+    text-decoration: 3px underline;
+    text-underline-offset: 4px;
+  }
+  .active {
+    color: white;
     text-decoration: 3px underline;
     text-underline-offset: 4px;
   }

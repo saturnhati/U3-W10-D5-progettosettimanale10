@@ -1,4 +1,5 @@
 <ul>
+  <p *ngIf="todos.length === 0">Oops, there are no tasks!</p>
   <li *ngFor="let todo of todos; let i = index">
     <div>
       <span><i class="mark fa-solid fa-angles-right"></i></span>

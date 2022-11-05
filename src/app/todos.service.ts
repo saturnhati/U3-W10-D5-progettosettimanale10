@@ -1,4 +1,3 @@
-import { provideImageKitLoader } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { Todo } from './classes/todo';
 
@@ -34,5 +33,20 @@ export class TodosService {
   removeTodo(todo: Todo) {
     let index = this.todos.indexOf(todo);
     this.todos.splice(index, 1);
+  }
+
+  // ! ci ho provato ma non va... (però li salva sul localstorage)
+  saveTodo() {
+    let todosString = JSON.stringify(this.todos);
+    localStorage.setItem('savedTodos', todosString);
+  }
+
+  loadTodo() {
+    let todosString = localStorage.getItem('saveTodos');
+    if (todosString !== null) {
+      let todosParsed = JSON.parse(todosString);
+      this.todos = todosParsed;
+      console.log(todosParsed);
+    }
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { VirtualTimeScheduler } from 'rxjs';
 import { Todo } from 'src/app/classes/todo';
 import { TodosService } from '../../todos.service';
 
@@ -11,7 +10,7 @@ import { TodosService } from '../../todos.service';
 export class TaskListComponent implements OnInit {
   constructor(private todosService: TodosService) {}
 
-  todos: Todo[] = this.todosService.todos;
+  todos: Todo[] = [];
 
   ngOnInit(): void {}
 
